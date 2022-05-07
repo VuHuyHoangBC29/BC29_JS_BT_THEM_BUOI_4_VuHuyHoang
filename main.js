@@ -68,18 +68,24 @@ function tienNgay(ngay, thang, nam) {
         if (ngay === 31) {
             thang += 1;
             ngay = 1;
+        } else {
+            ngay += 1;
         }
         nextDay = ngay + "/" + thang + "/" + nam;
     } else if (thang === 4 || thang === 6 || thang === 9 || thang === 11) {
         if (ngay === 30) {
             thang += 1;
-            ngay = 1;
+            ngay = 1;   
+        } else {
+            ngay += 1;
         }
         nextDay = ngay + "/" + thang + "/" + nam;
     } else if (thang === 2) {
         if (ngay === 28) {
             thang += 1;
-            ngay = 1;
+            ngay = 1; 
+        } else {
+            ngay += 1;
         }
         nextDay = ngay + "/" + thang + "/" + nam;
     } else {
@@ -98,7 +104,7 @@ document.getElementById("btnHomQua").onclick = function () {
     if (kiemTraNgayThang === "Ngày không xác định") {
         kiemTraNgayThang = "Ngày không xác định";
     } else if (kiemTraNgayThang === "Ngày xác định") {
-        var ngayHomQua = luiNgay(ngay, thang, nam);
+        ngayHomQua = luiNgay(ngay, thang, nam);
     }
 
     if (kiemTraNgayThang === "Ngày không xác định") {
@@ -117,7 +123,7 @@ document.getElementById("btnMai").onclick = function () {
     if (kiemTraNgayThang === "Ngày không xác định") {
         kiemTraNgayThang = "Ngày không xác định";
     } else if (kiemTraNgayThang === "Ngày xác định") {
-        var ngayMai = tienNgay(ngay, thang, nam);
+        ngayMai = tienNgay(ngay, thang, nam);
     }
 
     if (kiemTraNgayThang === "Ngày không xác định") {
